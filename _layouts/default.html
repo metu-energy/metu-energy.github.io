@@ -1,0 +1,31 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+  {% include blank.html %}
+  <header>
+    {% include custom-header.html %}
+  </header>
+
+  {% include carousel.html %}
+  <body>
+    <main aria-label="Content">
+      <div id="content-container" class="container">
+        {% include about.html %}
+        {% include team.html %}
+        {% include objectives.html %}
+        {% include publications.html %}
+        {% include contact.html %}
+        <!-- {{ content }}-->
+      </div>
+    </main>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+    
+  </body>
+  
+    {% include footer.html %}
+</html>
