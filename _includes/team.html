@@ -5,7 +5,7 @@
 <!-- Staff -->
 
 <h2><a id="staff"></a>Staff</h2>
-{% assign staff_members = site.memberslist | where: 'category', 'staff' | sort: 'rank' | reverse %}
+{% assign staff_members = site.memberslist | where: 'category', 'staff' | sort: 'surname' %}
 
 <div class="row">
   {% for member in staff_members %}
@@ -21,7 +21,7 @@
 
         <div class="col-md-7">
           <div class="card-body">
-            <h4 class="card-title">{{ member.title }}</h4>
+            <h4 class="card-title">{{ member.title }} {{ member.surname }}</h4>
             <p class="card-text">{{ member.role }}</p>
           </div>
         </div>
@@ -32,9 +32,10 @@
 </div>
 
 <!-- Students -->
+<br>
 
 <h2><a id="student"></a>Students</h2>
-{% assign student_members = site.memberslist | where: 'category', 'student' | sort: 'rank' %}
+{% assign student_members = site.memberslist | where: 'category', 'student' | sort: 'surname' %}
 
 <div class="row">
   {% for member in student_members %}
@@ -50,7 +51,7 @@
 
         <div class="col-md-7">
           <div class="card-body">
-            <h4 class="card-title">{{ member.title }}</h4>
+            <h4 class="card-title">{{ member.title }} {{ member.surname }}</h4>
             <p class="card-text">{{ member.role }}</p>
           </div>
         </div>
